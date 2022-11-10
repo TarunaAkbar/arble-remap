@@ -11,6 +11,21 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        new_macro1: new_macro1 {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro1";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
